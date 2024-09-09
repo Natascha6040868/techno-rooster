@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
 @media only screen and (max-width: 767px) {
     body {
-      background-color: #751197;
+      background-color: #9937b9;
     }
     header{
         display: flex;
@@ -13,20 +15,39 @@
         height: 10vh;
         background-color: #22A619;
     }
+    #logo{
+        height: 60px;
+        width: 400px;
+    }
     #buttons{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 50px;
+        gap: 40px;
     }
     .button{
         border: none;
         background-color: #22A619;
-        font-size: 40px;
+        font-size: 55px;
+        font-style: italic;
+        font-family: Josefin Sans;
         color: #751197;
-        border-radius: 8px;
-        padding: 15px;
+        border: #22A619 solid;
+        border-radius: 40px;
         margin: 40px;
+        width: 95%;
+        height: 220px;
+    }
+    #zorg{
+        background-image: url(img/zorg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #techniek{
+        background-image: url(img/techniek.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
     }
   }
