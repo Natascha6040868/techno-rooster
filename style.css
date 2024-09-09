@@ -13,31 +13,31 @@
         justify-content: center;
         align-items: center;
         height: 10vh;
+        width: auto;
         background-color: #22A619;
     }
     #logo{
-        height: 60px;
-        width: 400px;
+        height: 7vh;
+        width: 75vw;
     }
     #buttons{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 40px;
     }
     .button{
         border: none;
         background-color: #22A619;
-        font-size: 55px;
+        font-size: 6vh;
         font-style: italic;
         font-family: Josefin Sans;
         color: #751197;
         border: #22A619 solid;
         border-radius: 40px;
-        margin: 40px;
-        width: 95%;
-        height: 220px;
+        margin: 4vh;
+        width: 95vw;
+        height: 25vh;
     }
     #zorg{
         background-image: url(img/zorg.jpg);
