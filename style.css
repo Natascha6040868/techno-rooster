@@ -17,7 +17,19 @@
     background-repeat: no-repeat;
 }
 
-@media only screen and (min-width: 768px) {
+#OnderwijsBewegen{
+    background-image: url(img/onderwijs&bewegen.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#CirculairDuurzaamOndernemen{
+    background-image: url(img/CirculairDuurzaamOndernemen.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 767px) {
 
 body {
     display: flex;
@@ -69,7 +81,7 @@ main {
     font-size: 32px;
     font-family: Josefin Sans;
     border-radius: 12px;
-    padding: 40px;
+    padding: 50px;
     cursor: pointer;
     min-width: 250px;
     letter-spacing: 1.5px;
@@ -108,7 +120,7 @@ main {
     .button{
         border: none;
         background-color: #22A619;
-        font-size: 5vh;
+        font-size: 4vh;
         font-family: Josefin Sans;
         color: #751197;
         border: #22A619 solid;
