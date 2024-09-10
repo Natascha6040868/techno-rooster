@@ -4,10 +4,87 @@
     margin: 0;
     padding: 0;
 }
+
+#zorg{
+    background-image: url(img/zorg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#techniek{
+    background-image: url(img/techniek.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 768px) {
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    min-height: 100vh;
+    background-image: url(img/background.png);
+    background-size: 50%;
+    background-position-y: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #22A619;
+    height: 50vh;
+    width: 50vw;
+    border-radius: 0px 20px 20px 0px;
+}
+
+#logo {
+    height: 7vh;
+    width: 22vw;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.button {
+    color: #751197;
+    font-size: 32px;
+    font-family: Josefin Sans;
+    border-radius: 12px;
+    padding: 40px;
+    cursor: pointer;
+    min-width: 250px;
+    letter-spacing: 1.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
 @media only screen and (max-width: 767px) {
-    body {
-      background-color: #9937b9;
+    body{
+        background-image: url(img/mobile-background.png);
+        background-repeat: repeat;
+        background-size: 95%;
     }
+
     header{
         display: flex;
         justify-content: center;
@@ -15,7 +92,9 @@
         height: 10vh;
         width: auto;
         background-color: #22A619;
+        border-radius: 0px 0px 20px 20px;
     }
+
     #logo{
         height: 7vh;
         width: 75vw;
@@ -29,8 +108,7 @@
     .button{
         border: none;
         background-color: #22A619;
-        font-size: 6vh;
-        font-style: italic;
+        font-size: 5vh;
         font-family: Josefin Sans;
         color: #751197;
         border: #22A619 solid;
@@ -39,15 +117,4 @@
         width: 95vw;
         height: 25vh;
     }
-    #zorg{
-        background-image: url(img/zorg.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    #techniek{
-        background-image: url(img/techniek.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-  }
+}
