@@ -130,3 +130,24 @@ main {
         height: 25vh;
     }
 }
+
+
+/* voor de rooster */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, select {
+    margin-bottom: 10px;
+}

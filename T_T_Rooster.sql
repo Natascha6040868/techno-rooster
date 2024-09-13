@@ -14,6 +14,22 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-
+-- Users table iets aanpassen toch 
 ALTER TABLE users
 ADD CONSTRAINT unique_email UNIQUE (email);
+
+-- Table voor roosters 
+CREATE TABLE roosters (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    naam VARCHAR(255) NOT NULL,
+    inhoud TEXT
+);
+
+-- toegangcodes voor roosters 
+CREATE TABLE toegangscodes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    code VARCHAR(50) NOT NULL,
+    rooster_id INT,
+    FOREIGN KEY (rooster_id) REFERENCES roosters(id)
+);
+
