@@ -1,29 +1,34 @@
-<!-- toegangscodes class -->
-
 <?php
-include __DIR__ . '/../Database/db_connection.php'; // Correct pad naar db_connection.php
-
 class Toegangscode {
     private $conn;
 
-    public function __construct() {
-        global $conn; // Gebruik de globale verbinding
-        $this->conn = $conn;
+    // Constructor that accepts the database connection
+    public function __construct($db) {
+        $this->conn = $db;
     }
 
-    public function addCode($code, $rooster_id) {
-        $sql = "INSERT INTO toegangscodes (code, rooster_id) VALUES (?, ?)";
+    // Method to add a new access code for a category
+    public function addCategoryCode($code, $category) {
+        $sql = "INSERT INTO category_access_codes (category_name, access_code) VALUES (?, ?)";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("si", $code, $rooster_id);
+        $stmt->bind_param("ss", $category, $code);
         return $stmt->execute();
     }
 
-    public function validateCode($code) {
-        $sql = "SELECT * FROM toegangscodes WHERE code = ?";
+    // Method to retrieve codes for a specific category
+    public function getCategoryCodes($category) {
+        $sql = "SELECT access_code FROM category_access_codes WHERE category_name = ?";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("s", $code);
+        $stmt->bind_param("s", $category);
         $stmt->execute();
-        return $stmt->get_result();
+        $result = $stmt->get_result();
+        $codes = [];
+
+        while ($row = $result->fetch_assoc()) {
+            $codes[] = $row['access_code'];
+        }
+
+        return $codes;
     }
 }
 ?>

@@ -33,26 +33,13 @@
         <a href="home.php"><img id="logo" src="img/logo.png" alt="logo"></a>
     </header>
     <main>
-        <section id="buttons">
-            <?php
-            // Importeer de ButtonGenerator klasse
-            require 'class/ButtonGenerator.php';
-
-            // Array met knoppenlabels en de bijbehorende webpagina's (URLs)
-            $buttons = [
-                "Slimme Techniek" => "techniek.php",
-                "Zorg & gezond leven" => "zorg.php",
-                "Onderwijs & bewegen" => "onderwijs_bewegen.php",
-                "Circulair & duurzaam ondernemen" => "circulair_duurzaam_ondernemen.php"
-            ];
-
-            // Maak een nieuw ButtonGenerator object
-            $buttonGenerator = new ButtonGenerator($buttons);
-
-            // Roep de methode aan om de knoppen te genereren
-            $buttonGenerator->generateButtons();
-            ?>
-        </section>
+    <h1>Kies een categorie</h1>
+    <ul>
+        <li><a href="access_code.php?category=<?php echo urlencode('Slimme Techniek'); ?>">Slimme Techniek</a></li>
+        <li><a href="access_code.php?category=<?php echo urlencode('Zorg & gezond leven'); ?>">Zorg & gezond leven</a></li>
+        <li><a href="access_code.php?category=<?php echo urlencode('Onderwijs & bewegen'); ?>">Onderwijs & bewegen</a></li>
+        <li><a href="access_code.php?category=<?php echo urlencode('Circulair & duurzaam ondernemen'); ?>">Circulair & duurzaam ondernemen</a></li>
+    </ul>
     </main>
 </body>
 
